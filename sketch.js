@@ -5,7 +5,7 @@
 // Timer
 // https://youtu.be/MLtAMg9_Svw
 
-var timeleft = 10;
+var timeleft = 10000;
        
 var startTime = 0;
 var currentTime = 0;
