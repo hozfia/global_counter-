@@ -6,16 +6,16 @@
 // https://youtu.be/MLtAMg9_Svw
 
 var timeleft = 86400;
-       
+
 var startTime = 0;
 var currentTime = 0;
 
 function convertSeconds(s) {
-    
+
   var min = floor(s / 60);
   var hou = floor(min / 60);
   var sec = s % 60;
-  return nf(hou, 2) + ':'+nf(min%60, 2) + ':' + nf(sec, 2);
+  return nf(hou, 2) + ':' + nf(min % 60, 2) + ':' + nf(sec, 2);
 }
 
 var ding;
@@ -40,7 +40,7 @@ function setup() {
   timer.html(convertSeconds(timeleft - currentTime));
 
   var interval = setInterval(timeIt, 1000);
-
+ //to add : clear the counter in zero 
   function timeIt() {
     currentTime = floor((millis() - startTime) / 1000);
     timer.html(convertSeconds(timeleft - currentTime));
